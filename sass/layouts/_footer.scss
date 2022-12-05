@@ -1,0 +1,129 @@
+.section.footer {
+  background: #2f303a;
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+.footer__logo {
+  color: var(--additional-text-color);
+}
+
+.footer__contacts {
+  font-style: normal;
+}
+
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.footer__address {
+  color: var(--additional-text-color);
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 9px;
+  }
+
+.footer__address-link {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+    line-height: 24px;
+  
+    letter-spacing: 0.03em;
+  
+}
+
+.footer__address-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer__container {
+  display: flex;
+  gap: 70px;
+  align-items: baseline;
+}
+
+.footer-actions__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.footer-actions__list{
+  display: flex;
+  justify-content: center;
+    gap: 10px;
+}
+
+.footer-actions__item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);;
+  color: var(--additional-text-color);
+  transition: background-color 250ms var(--timing-function),
+      color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background: var(--accent-color);
+  }
+}
+.footer-actions__icon{
+fill: currentColor;
+}
+
+.email-input {
+  margin-left: auto;
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+  &__email {
+    min-width: 358px;
+    height: 50px;
+    background-color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    padding-left: 16px;
+  }
+}
+
+.email-input__btn-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--accent-color);
+  color: var(--additional-text-color);
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: var(--accent-color);
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}

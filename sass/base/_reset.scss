@@ -1,0 +1,24 @@
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+nav {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    /* прибираємо підкреслення */
+}
+
+h1,
+h2,
+h3,
+p {
+    /* скидаємо на заголовках відступи */
+    padding: 0;
+    margin: 0;
+}

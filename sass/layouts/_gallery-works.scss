@@ -1,0 +1,38 @@
+.box-list-work {
+  padding-top: 0px;
+  & .title {
+    margin-bottom: 50px;
+  }
+}
+.list-work {
+  display: flex;
+  flex-wrap: wrap;
+  & .item + .item {
+    margin-left: 30px;
+  }
+}
+
+.item-gallery {
+  position: relative;
+}
+
+.title-item-gallery {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 70px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: rgba(47, 48, 58, 0.8);
+  color: #ffffff;
+}
