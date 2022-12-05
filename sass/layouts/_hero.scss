@@ -1,11 +1,10 @@
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  height: 600px;
-  max-width: 1600px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
-background-color: #2f303a;
+  background-color: #2f303a;
   text-align: center;
   background-image: linear-gradient(
       to right,
@@ -16,21 +15,32 @@ background-color: #2f303a;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  & .hero__title {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    width: 696px;
-
-    color: var(--additional-text-color);
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
-    text-align: center;
-    text-transform: uppercase;
+  @media screen and (min-width: 768px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: 600px;
+    max-width: 1600px;
   }
-}
+    & .hero__title 
+    {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+      width: 360px;
+      color: var(--additional-text-color);
+        font-weight: 900;
+        font-size: 26px;
+        line-height: 1.62;
+        letter-spacing: 0.06em;
+        text-align: center;
+        text-transform: uppercase;
+      @media screen and (min-width: 768px) {
+      width: 696px;
+      font-size: 44px;
+      line-height: 1.37;
+      }
+    }
+  }
 
 .hero__btn {
   outline: #2f303a;

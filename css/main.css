@@ -59,19 +59,33 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  min-width: 480px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
 }
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 1200px;
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
   }
 }
 
-.container .responsive {
-  max-width: 1200px;
+.section {
+  padding: 0px;
 }
-
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
   .section {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -349,6 +363,7 @@ body {
   .header__container {
     display: flex;
     align-items: center;
+    margin: 0 auto;
   }
 }
 
@@ -367,16 +382,10 @@ body {
 
 @media screen and (min-width: 768px) {
   .header__logo {
-    margin-right: 88px;
+    margin-right: 35px;
     color: #000000;
   }
 }
-@media screen and (min-width: 1200px) {
-  .header__logo {
-    margin-right: 90px;
-  }
-}
-
 .menu {
   display: none;
 }
@@ -404,7 +413,7 @@ body {
   color: var(--primary-text-color);
   transition: color var(--timing-function);
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .menu__link {
     padding-top: 32px;
     padding-bottom: 32px;
@@ -493,10 +502,9 @@ body {
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  height: 600px;
-  max-width: 1600px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
   background-color: #2f303a;
@@ -506,18 +514,33 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: 600px;
+    max-width: 1600px;
+  }
+}
 .hero .hero__title {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  width: 696px;
+  width: 360px;
   color: var(--additional-text-color);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .hero .hero__title {
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.37;
+  }
 }
 
 .hero__btn {
@@ -542,40 +565,70 @@ body {
   color: var(--accent-color);
 }
 
+.box-detail {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .box-detail-list {
-  display: flex;
+  width: 100%;
+  gap: 30;
 }
-.box-detail-list > .item {
-  max-width: 270px;
+@media screen and (min-width: 768px) {
+  .box-detail-list {
+    margin-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
-.box-detail-list .item + .item {
-  margin-left: 30px;
+@media screen and (min-width: 768px) {
+  .box-detail-list > .item {
+    width: 352px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .box-detail-list > .item {
+    width: 270px;
+  }
 }
 .box-detail-list .text {
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.72;
 }
 
 .subtitle-detail::before {
   display: inline-block;
-  width: 270px;
-  height: 120px;
-  content: "";
-  background-size: 70px 70px;
-  background-position: center;
-  background-repeat: no-repeat;
   margin-bottom: 30px;
-  background-color: #f5f4fa;
+  content: "";
+  width: 100%;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70px 70px;
+  background-color: #F5F4FA;
   border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .subtitle-detail::before {
+    background-color: #f5f4fa;
+    border-radius: 4px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subtitle-detail::before {
+    width: 270px;
+  }
 }
 
 .subtitle-detail.subtitle {
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.15;
+  text-align: center;
+  text-align: left;
 }
-
 .detail1::before {
   background-image: url(../images/antenna.svg);
 }

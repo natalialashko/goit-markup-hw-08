@@ -6,6 +6,9 @@
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
+    // justify-content: center;
+    margin: 0 auto;
+
   }
 }
 
@@ -23,11 +26,11 @@
 .header__logo {
 
   @media screen and (min-width: 768px) {
-    margin-right: 88px;
+    margin-right: 35px;
     color: #000000;
   }
   @media screen and (min-width: 1200px) {
-    margin-right: 90px;
+    // margin-right: 90px;
     
   }
 }
@@ -60,7 +63,7 @@
   color: var(--primary-text-color);
 
   transition: color var(--timing-function);
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   padding-top: 32px;
     padding-bottom: 32px;
 }
@@ -120,6 +123,7 @@
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
+    
     color: var(--additional-color);
     font-weight: 500;
     font-size: 12px;
