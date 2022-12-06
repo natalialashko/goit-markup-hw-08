@@ -1,8 +1,12 @@
 .box-list-work {
+  display: none;
+  @media screen and (min-width: 1200px){
+display: block;
   padding-top: 0px;
   & .title {
     margin-bottom: 50px;
   }
+}
 }
 .list-work {
   display: flex;
@@ -20,7 +24,6 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

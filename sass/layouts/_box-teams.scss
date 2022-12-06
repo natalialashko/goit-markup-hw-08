@@ -1,97 +1,126 @@
 .box-teams {
-    background-color: #f5f4fa;
+  background-color: #f5f4fa;
+//   padding-top: 60px;
+//   padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
-    .title {
-        margin-bottom: 50px;
+  .title {
+    margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: 1.17;
     }
+  }
 }
-
-
 
 .teams-work {
+  @media screen and (min-width: 768px) {
     display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+  }
+   @media screen and (min-width: 1200px) {
+             gap: 0px;
+       
+   }
 
-    .item {
-        background-color: var(--primary-background-color);
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-            0px 2px 1px rgba(0, 0, 0, 0.2);
-        border-radius: 0px 0px 4px 4px;
+  .item {
+    background-color: var(--primary-background-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    margin-bottom: 10px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0px;
     }
+  }
 
-    .item+.item {
-        margin-left: 30px;
+  .item + .item {
+    @media screen and (min-width: 1200px) {
+      margin-left: 30px;
     }
-
-    .box-subtitle {
-        text-align: center;
-    }
-}
-
-
-
-.team-foto {
-    margin-bottom: 30px;
-}
-
-
-
-.subtitle-foto {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.18;
-    text-align: center;
-    max-width: 270px;
-
-    .item & {
-        margin-bottom: 10px;
-    }
+  }
 }
 
 .box-subtitle {
-    margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 24px;
+  padding-left: 122px;
+  padding-right: 122px;
+  @media screen and (min-width: 768px) {
+    padding-left: 74px;
+    padding-right: 74px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 30px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 
-    & .text {
-        margin-bottom: 30px;
-        font-size: 16px;
-        line-height: 1.18;
-        text-align: center;
-        max-width: 270px;
-        margin-bottom: 16px;
-    }
+  & .text {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+}
+
+.team-foto {
+  max-width: 450px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 354px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 270px;
+  }
+}
+
+.subtitle-foto {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .actions-list {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .actions-item {
-    width: 44px;
-    height: 44px;
+  width: 44px;
+  height: 44px;
 
-    &-link {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #afb1b8;
+  &-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #afb1b8;
 
-        transition: background-color var(--timing-function),
-            color var(--timing-function);
+    transition: background-color var(--timing-function),
+      color var(--timing-function);
 
-        &:hover,
-        &:focus {
-            background-color: var(--accent-color);
-            color: var(--additional-text-color);
-        }
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+      color: var(--additional-text-color);
     }
+  }
 
-    &-icon {
-        fill: currentColor;
-        
-    }
-
+  &-icon {
+    fill: currentColor;
+  }
 }
