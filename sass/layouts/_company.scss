@@ -1,37 +1,54 @@
 .title-company {
   margin-bottom: 30px;
   @media screen and (min-width: 1200px) {
-  margin-bottom: 50px;}
+    margin-bottom: 50px;
+  }
 }
 
 .company-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  margin: 0 auto;
+  @media screen and (min-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .company-item {
-  width: 210px;
-  height: 92px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 480px) {
+    margin-bottom: 0px;
+    width: 210px;
+    height: 92px;
+  }
   @media screen and (min-width: 768px) {
     width: 226px;
-    }@media screen and (min-width: 1200px) {
-      width: 170px;
-    }
+  }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  }
 }
 
 .company-link {
-  width: 100%;
+  padding: 20px 30px;
+  width: 50%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: #afb1b8;
   fill: #afb1b8;
-  transition: color var(--timing-function),
-    border var(--timing-function);
+  transition: color var(--timing-function), border var(--timing-function);
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media screen and (min-width: 480px) {
+    width: 100%;
+    padding: 0;
+  }
+
   &:hover {
     border: 1px solid var(--accent-color);
     color: var(--accent-color);

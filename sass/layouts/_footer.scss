@@ -2,20 +2,30 @@
   background: #2f303a;
   padding-bottom: 60px;
   padding-top: 60px;
-}
+    text-align: center;
+    @media screen and (min-width: 768px) {
+    text-align: right;
+    }
 
+}
+.footer__box-contacts{
+  margin-bottom: 60px;
+
+}
 .footer__logo {
   color: var(--additional-text-color);
-}
+display: inline-block;
+margin-bottom: 28px;
+@media screen and (min-width: 768px) {
+    text-align: right;
+    margin-bottom: 20px;
+}}
 
 .footer__contacts {
   font-style: normal;
 }
 
-.footer__logo {
-  display: inline-block;
-  margin-bottom: 20px;
-}
+
 
 .footer__address {
   color: var(--additional-text-color);
@@ -39,11 +49,16 @@
 }
 
 .footer__container {
+
+  @media screen and (min-width: 768px) {
   display: flex;
   gap: 70px;
   align-items: baseline;
 }
-
+}
+.footer-actions{
+  margin-bottom: 60px;
+}
 .footer-actions__title {
   margin-bottom: 20px;
   font-weight: 700;
@@ -54,11 +69,12 @@
   color: #ffffff;
 }
 .footer-actions__list{
+  
   display: flex;
   justify-content: center;
     gap: 10px;
-}
 
+}
 .footer-actions__item {
   width: 44px;
   height: 44px;
@@ -89,12 +105,15 @@ fill: currentColor;
     color: #ffffff;
   }
   &__form {
+   
+  @media screen and (min-width: 768px) {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 12px;
-  }
+  }}
   &__email {
+    margin-bottom: 20px;
     min-width: 358px;
     height: 50px;
     background-color: inherit;
@@ -106,6 +125,7 @@ fill: currentColor;
 }
 
 .email-input__btn-submit {
+    margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
