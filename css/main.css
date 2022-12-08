@@ -572,7 +572,6 @@ body {
 
 .box-detail-list {
   width: 100%;
-  gap: 30;
 }
 @media screen and (min-width: 768px) {
   .box-detail-list {
@@ -580,6 +579,11 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .box-detail-list {
+    gap: 30;
   }
 }
 @media screen and (min-width: 768px) {
@@ -777,7 +781,8 @@ body {
 }
 
 .team-foto {
-  max-width: 450px;
+  max-width: 480px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .team-foto {
@@ -968,6 +973,7 @@ body {
 @media screen and (min-width: 768px) {
   .footer__container {
     display: flex;
+    justify-content: center;
     gap: 60px;
     flex-wrap: wrap;
   }
@@ -1091,11 +1097,29 @@ body {
 
 .list-portfolio {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  width: 320px;
+  margin-bottom: 40px;
 }
-.list-portfolio li + li {
-  margin-left: 8px;
+@media screen and (min-width: 768px) {
+  .list-portfolio {
+    flex-wrap: nowrap;
+    width: 678px;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .list-portfolio {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .list-portfolio li + li {
+    margin-left: 8px;
+  }
 }
 
 .portfolio-btn {
@@ -1122,10 +1146,18 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+@media screen and (min-width: 768px) {
+  .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .link-portfolio {
@@ -1161,12 +1193,10 @@ body {
 }
 
 .portfolio-title {
-  margin-bottom: 4px;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--primary-text-color);
-  max-width: 322px;
 }
 
 .portfolio-text {
@@ -1174,7 +1204,6 @@ body {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--additional-color);
-  max-width: 322px;
 }
 
 .comment-card {

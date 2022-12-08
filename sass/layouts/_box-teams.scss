@@ -72,7 +72,8 @@
 }
 
 .team-foto {
-  max-width: 450px;
+  max-width: 480px;
+  margin: 0 auto;
 
   @media screen and (min-width: 768px) {
     max-width: 354px;

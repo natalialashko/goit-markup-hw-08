@@ -4,12 +4,26 @@
 
 .list-portfolio {
   display: flex;
+  flex-wrap: wrap;
+  width: 320px;
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    flex-wrap: nowrap;
+    width: 678px;
   justify-content: center;
-  margin-bottom: 50px;
-
-  & li + li {
+  margin-bottom: 30px;
+  }
+    @media screen and (min-width: 1200px) {
+     margin-left: auto;
+     margin-right: auto;
+      margin-bottom: 50px;
+    }
+& li+li {
+  @media screen and (min-width: 768px) {
     margin-left: 8px;
   }
+}
+ 
 }
 
 .portfolio-btn {
@@ -45,11 +59,16 @@
 }
 
 .portfolio {
-  display: flex;
+@media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;}
+  @media screen and (min-width: 1200px) {
+     
   flex-wrap: wrap;
   gap: 30px;
 }
-
+}
 .link-portfolio {
   display: block;
   width: 100%;
@@ -89,12 +108,13 @@
 }
 
 .portfolio-title {
-  margin-bottom: 4px;
+ 
+  // margin-bottom: 4px;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--primary-text-color);
-  max-width: 322px;
+  // max-width: 322px;
 }
 
 .portfolio-text {
@@ -102,7 +122,7 @@
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--additional-color);
-  max-width: 322px;
+  // max-width: 322px;
 }
 
 .comment-card {
