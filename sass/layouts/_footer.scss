@@ -3,23 +3,40 @@
   padding-bottom: 60px;
   padding-top: 60px;
     text-align: center;
-    @media screen and (min-width: 768px) {
-    text-align: right;
+    @media screen and (min-width: 1200px) {
+    text-align: left;
     }
 
 }
+.footer_tablet{
+  @media screen and (min-width: 768px) {
+      display: flex;
+      margin: 0 auto;
+      gap: 162px;
+        align-items: baseline;
+        justify-content: space-evenly;
+    }
+    @media screen and (min-width: 1200px) {
+      gap: 70px;
+    }
+}
 .footer__box-contacts{
   margin-bottom: 60px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
+  }
+
 
 }
 .footer__logo {
   color: var(--additional-text-color);
 display: inline-block;
 margin-bottom: 28px;
-@media screen and (min-width: 768px) {
-    text-align: right;
-    margin-bottom: 20px;
-}}
+// @media screen and (min-width: 768px) {
+//     // text-align: right;
+//     margin-bottom: 28px;
+// }
+}
 
 .footer__contacts {
   font-style: normal;
@@ -31,33 +48,46 @@ margin-bottom: 28px;
   color: var(--additional-text-color);
   font-size: 14px;
   font-weight: 400;
-  margin-bottom: 9px;
+  line-height: 1.4;
+  letter-spacing: 0.03px;
+  margin-bottom: 12px;
   }
 
 .footer__address-link {
   font-weight: 400;
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
-    line-height: 24px;
+    line-height: 1.14;
   
     letter-spacing: 0.03em;
   
 }
 
 .footer__address-item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 12px;
 }
 
 .footer__container {
 
   @media screen and (min-width: 768px) {
   display: flex;
-  gap: 70px;
-  align-items: baseline;
+  gap: 60px;
+  // align-items: baseline;
+      flex-wrap: wrap;
 }
+ @media screen and (min-width: 1200px) {
+   display: flex;
+   gap: 70px;
+   align-items: baseline;
+   flex-wrap: nowrap;
+ 
+ }
 }
 .footer-actions{
   margin-bottom: 60px;
+  @media screen and (min-width: 768px) {
+      margin-bottom: 0px;
+    }
 }
 .footer-actions__title {
   margin-bottom: 20px;
@@ -95,6 +125,9 @@ fill: currentColor;
 
 .email-input {
   margin-left: auto;
+  @media screen and (min-width: 768px) {
+    margin: 0 auto;
+  }
   &__title {
     font-weight: 700;
     font-size: 14px;
@@ -108,10 +141,15 @@ fill: currentColor;
    
   @media screen and (min-width: 768px) {
     display: flex;
-    justify-content: center;
-    align-items: center;
+  
     gap: 12px;
-  }}
+  }
+    @media screen and (min-width: 1200px) {
+      
+        align-content: center;
+    
+    }
+}
   &__email {
     margin-bottom: 20px;
     min-width: 358px;
