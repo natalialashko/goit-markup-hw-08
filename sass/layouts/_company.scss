@@ -1,6 +1,6 @@
 .title-company {
   margin-bottom: 30px;
-  @media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
     margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.17;
@@ -8,7 +8,8 @@
 }
 
 .company-list {
-  margin: 0 auto;
+  // margin: 0 auto;
+  width: 100%;
   @media screen and (min-width: 480px) {
     display: flex;
     flex-wrap: wrap;
@@ -21,14 +22,16 @@
 
   @media screen and (min-width: 480px) {
     margin-bottom: 0px;
-    width: 210px;
+  width: calc(100% - 30px)/2;
     height: 92px;
   }
   @media screen and (min-width: 768px) {
-    width: 226px;
+width: calc(100% - 60px)/3;
+    // width: 226px;
   }
   @media screen and (min-width: 1200px) {
-    width: 170px;
+    // width: 170px;
+    width: calc(100% - 150px)/6;
   }
 }
 
@@ -48,7 +51,7 @@
   justify-content: center;
   @media screen and (min-width: 480px) {
     width: 100%;
-    padding: 0;
+    // padding: 0;
   }
 
   &:hover {

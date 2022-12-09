@@ -57,22 +57,23 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    max-width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
     padding-left: 15px;
     padding-right: 15px;
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
@@ -125,6 +126,8 @@ body {
 
 .img {
   display: block;
+  width: 100%;
+  height: auto;
   max-width: 100%;
 }
 
@@ -355,9 +358,106 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .menu-mobile__open {
+    display: none;
+  }
+}
+
+.menu-mobile {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background: #FFFFFF;
+}
+.menu-mobile > .conteiner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+}
+@media screen and (min-width: 768px) {
+  .menu-mobile {
+    display: none;
+  }
+}
+
+.menu-mobile__close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.list-activ {
+  display: flex;
+}
+
+.menu-mobile__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.menu-mobile__list {
+  margin-bottom: 206px;
+}
+
+.menu-mobile__link {
+  display: block;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+
+.menu-mobile__email-link {
+  display: block;
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.1764705882;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+
+.menu-mobile__tel-link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.menu-mobile__address-list {
+  margin-bottom: 64px;
+}
+
+.item-activ:not(:last-child) {
+  padding-right: 10px;
+  margin-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.name-activ {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2222222222;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
   .header__container {
-    display: flex;
     align-items: center;
+    justify-content: center;
     margin: 0 auto;
   }
 }
@@ -502,6 +602,12 @@ body {
   fill: var(--accent-color);
 }
 
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .hero {
   padding-top: 118px;
   padding-bottom: 118px;
@@ -579,11 +685,13 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: calc(100% - 30px)/2;
   }
 }
 @media screen and (min-width: 1200px) {
   .box-detail-list {
     gap: 30;
+    width: calc(100% - 120px)/4;
   }
 }
 @media screen and (min-width: 768px) {
@@ -781,20 +889,14 @@ body {
 }
 
 .team-foto {
-  max-width: 480px;
+  width: 100%;
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .team-foto {
-    max-width: 354px;
+    width: 100%;
   }
 }
-@media screen and (min-width: 1200px) {
-  .team-foto {
-    max-width: 270px;
-  }
-}
-
 .subtitle-foto {
   font-weight: 500;
   font-size: 16px;
@@ -834,7 +936,7 @@ body {
 .title-company {
   margin-bottom: 30px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .title-company {
     margin-bottom: 50px;
     font-size: 36px;
@@ -843,7 +945,7 @@ body {
 }
 
 .company-list {
-  margin: 0 auto;
+  width: 100%;
 }
 @media screen and (min-width: 480px) {
   .company-list {
@@ -859,18 +961,18 @@ body {
 @media screen and (min-width: 480px) {
   .company-item {
     margin-bottom: 0px;
-    width: 210px;
+    width: calc(100% - 30px)/2;
     height: 92px;
   }
 }
 @media screen and (min-width: 768px) {
   .company-item {
-    width: 226px;
+    width: calc(100% - 60px)/3;
   }
 }
 @media screen and (min-width: 1200px) {
   .company-item {
-    width: 170px;
+    width: calc(100% - 150px)/6;
   }
 }
 
@@ -891,7 +993,6 @@ body {
 @media screen and (min-width: 480px) {
   .company-link {
     width: 100%;
-    padding: 0;
   }
 }
 .company-link:hover {
@@ -1098,19 +1199,20 @@ body {
 .list-portfolio {
   display: flex;
   flex-wrap: wrap;
-  width: 320px;
+  width: 100%;
   margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
   .list-portfolio {
     flex-wrap: nowrap;
-    width: 678px;
+    width: calc(100% - 30px)/2;
     justify-content: center;
     margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .list-portfolio {
+    width: calc(100% - 60px)/3;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
