@@ -70,14 +70,19 @@
           </li>
         </ul>
         <button class="menu-mobile__open" type="button" data-menu-open>
-          o
+         <svg class="actions-item-icon" width="40" height="40">
+                        <use href="./images/icons.svg#icon-menu_40px"></use>
+                      </svg>
         </button>
       </div>
       <!-- меню для мобільної версії -->
       <div class="menu-mobile is-hidden" data-menu>
         <div class="conteiner">
           <button class="menu-mobile__close" type="button" data-menu-close>
-            x
+           <svg class="actions-item-icon" width="40" height="40">
+                        <use href="./images/icons.svg#icon-close-black"></use>
+                      </svg>
+            
           </button>
           <ul class="menu-mobile__list">
             <li class="menu-mobile__item">
@@ -251,8 +256,7 @@
               <picture>
                 <source
                   media="(min-width: 1200px)"
-                  srcset="./images/box1.jpg 1x, 
-                  ./images/box1-2x.jpg 2x"
+                  srcset="./images/box1.jpg 1x, ./images/box1-2x.jpg 2x"
                 />
               </picture>
               <img
@@ -309,19 +313,26 @@
                 />
                 <source
                   media="(min-width: 768px)"
-                  srcset=" ./images/img1-tab-1x.jpg 1x, ./images/img1-tab-2x.jpg 2x"
+                  srcset="
+                    ./images/img1-tab-1x.jpg 1x,
+                    ./images/img1-tab-2x.jpg 2x
+                  "
                 />
                 <source
                   media="(max-width: 767px)"
-                  srcset="./images/img1-mob-1x.jpg 1x, ./images/img1-mob-2x.jpg 2x"
+                  srcset="
+                    ./images/img1-mob-1x.jpg 1x,
+                    ./images/img1-mob-2x.jpg 2x
+                  "
+                />
+
+                <img
+                  class="team-foto img"
+                  src="./images/img1.jpg"
+                  alt="фото Product Designer"
+                  width="450"
                 />
               </picture>
-              <img
-                class="team-foto img"
-                src="./images/img1.jpg"
-                alt="фото Product Designer"
-                width="450"
-              />
               <div class="box-subtitle">
                 <h3 class="subtitle subtitle-foto">Ігор Дем'яненко</h3>
                 <p class="text">Product Designer</p>
@@ -365,19 +376,26 @@
                 />
                 <source
                   media="(min-width: 768px)"
-                  srcset="./images/img2-tab-1x.jpg 1x, ./images/img2-tab-2x.jpg 2x"
+                  srcset="
+                    ./images/img2-tab-1x.jpg 1x,
+                    ./images/img2-tab-2x.jpg 2x
+                  "
                 />
                 <source
                   media="(max-width: 767px)"
-                  srcset="./images/img2-mob-1x.jpg 1x, ./images/img2-mob-2x.jpg 2x"
+                  srcset="
+                    ./images/img2-mob-1x.jpg 1x,
+                    ./images/img2-mob-2x.jpg 2x
+                  "
+                />
+
+                <img
+                  class="team-foto img"
+                  src="./images/img2-mob-1x.jpg"
+                  alt="фото Frontend Developer"
+                  width="450"
                 />
               </picture>
-              <img
-                class="team-foto img"
-                src="./images/img2-mob-1x.jpg"
-                alt="фото Frontend Developer"
-                width="450"
-              />
               <div class="box-subtitle">
                 <h3 class="subtitle subtitle-foto">Ольга Рєпіна</h3>
                 <p class="text">Frontend Developer</p>
@@ -421,19 +439,26 @@
                 />
                 <source
                   media="(min-width: 768px)"
-                  srcset="./images/img3-tab-1x.jpg 1x, ./images/images/img3-tab-2x.jpg 2x "
+                  srcset="
+                    ./images/img3-tab-1x.jpg        1x,
+                    ./images/images/img3-tab-2x.jpg 2x
+                  "
                 />
                 <source
                   media="(max-width: 767px)"
-                  srcset="./images/img3-mob-1x.jpg 1x, ./images/img3-mob-2x.jpg 2x "
+                  srcset="
+                    ./images/img3-mob-1x.jpg 1x,
+                    ./images/img3-mob-2x.jpg 2x
+                  "
+                />
+
+                <img
+                  class="team-foto img"
+                  src="/images/img3-mob-1x.jpg"
+                  alt="фото Marketing"
+                  width="450"
                 />
               </picture>
-              <img
-                class="team-foto img"
-                src="/images/img3-mob-1x.jpg"
-                alt="фото Marketing"
-                width="450"
-              />
               <div class="box-subtitle">
                 <h3 class="subtitle subtitle-foto">Микола Тарасов</h3>
                 <p class="text">Marketing</p>
@@ -477,19 +502,26 @@
                 />
                 <source
                   media="(min-width: 768px)"
-                  srcset="./images/img4-tab-1x.jpg 1x, ./images/img4-tab-2x.jpg 2x"
+                  srcset="
+                    ./images/img4-tab-1x.jpg 1x,
+                    ./images/img4-tab-2x.jpg 2x
+                  "
                 />
                 <source
                   media="(max-width: 767)"
-                  srcset="./images/img4-mob-1x.jpg 1x, ./images/img4-mob-2x.jpg 2x"
+                  srcset="
+                    ./images/img4-mob-1x.jpg 1x,
+                    ./images/img4-mob-2x.jpg 2x
+                  "
+                />
+
+                <img
+                  class="team-foto img"
+                  src="./images/img4-mob-1x.jpg"
+                  alt="фото UI Designer"
+                  width="450"
                 />
               </picture>
-              <img
-                class="team-foto img"
-                src="./images/img4-mob-1x.jpg"
-                alt="фото UI Designer"
-                width="450"
-              />
               <div class="box-subtitle">
                 <h3 class="subtitle subtitle-foto">Михайло Єрмаков</h3>
                 <p class="text">UI Designer</p>
