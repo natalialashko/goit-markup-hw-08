@@ -69,18 +69,24 @@
             </a>
           </li>
         </ul>
-        <button  class="menu-mobile__open" type="button" data-menu-open>o</button>
+        <button class="menu-mobile__open" type="button" data-menu-open>
+          o
+        </button>
       </div>
       <!-- меню для мобільної версії -->
       <div class="menu-mobile is-hidden" data-menu>
         <div class="conteiner">
-          <button  class="menu-mobile__close" type="button" data-menu-close>x</button>
+          <button class="menu-mobile__close" type="button" data-menu-close>
+            x
+          </button>
           <ul class="menu-mobile__list">
             <li class="menu-mobile__item">
               <a href="./" class="menu-mobile__link">Студія </a>
             </li>
             <li class="menu-mobile__item">
-              <a href="./portfolio.html" class="menu-mobile__link">Портфоліо </a>
+              <a href="./portfolio.html" class="menu-mobile__link"
+                >Портфоліо
+              </a>
             </li>
             <li class="menu-mobile__item">
               <a href="#" class="menu-mobile__link">Контакти</a>
@@ -96,22 +102,27 @@
               </a>
             </li>
             <li class="menu-mobile__address-item">
-              <a
-                href="tel:+380961111111"
-                class="menu-mobile__tel-link"
-              >
+              <a href="tel:+380961111111" class="menu-mobile__tel-link">
                 +38 096 111 11 11
               </a>
             </li>
           </ul>
           <ul class="list-activ">
-            <li class="item-activ"><a href="#" class="name-activ">Instagram</a></li>
-            <li class="item-activ"><a href="#" class="name-activ">Twitter</a></li>
-            <li class="item-activ"><a href="#" class="name-activ">Facebook</a></li>
-            <li class="item-activ"><a href="#" class="name-activ">LinkedIn</a></li>
+            <li class="item-activ">
+              <a href="#" class="name-activ">Instagram</a>
+            </li>
+            <li class="item-activ">
+              <a href="#" class="name-activ">Twitter</a>
+            </li>
+            <li class="item-activ">
+              <a href="#" class="name-activ">Facebook</a>
+            </li>
+            <li class="item-activ">
+              <a href="#" class="name-activ">LinkedIn</a>
+            </li>
           </ul>
         </div>
-        </div>
+      </div>
     </header>
     <!-- унікальний контент сторінки main-->
     <main>
@@ -237,6 +248,13 @@
           <h2 class="title box-list-work__title">Чим ми займаємося</h2>
           <ul class="list-work">
             <li class="item item-gallery">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/box1.jpg 1x, 
+                  ./images/box1-2x.jpg 2x"
+                />
+              </picture>
               <img
                 class="img"
                 src="./images/box1.jpg"
@@ -246,6 +264,12 @@
               <p class="title-item-gallery">Десктопні додатки</p>
             </li>
             <li class="item item-gallery">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/box2.jpg 1x, ./images/box2-2x.jpg 2x"
+                />
+              </picture>
               <img
                 class="img"
                 src="./images/box2.jpg"
@@ -255,6 +279,12 @@
               <p class="title-item-gallery">Мобільні додатки</p>
             </li>
             <li class="item item-gallery">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/box3.jpg 1x, ./images/box3-2x.jpg 2x"
+                />
+              </picture>
               <img
                 class="img"
                 src="./images/box3.jpg"
@@ -272,6 +302,20 @@
           <h2 class="title box-teams__title">Наша команда</h2>
           <ul class="teams-work">
             <li class="item">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/img1.jpg 1x, ./images/img1-2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset=" ./images/img1-tab-1x.jpg 1x, ./images/img1-tab-2x.jpg 2x"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/img1-mob-1x.jpg 1x, ./images/img1-mob-2x.jpg 2x"
+                />
+              </picture>
               <img
                 class="team-foto img"
                 src="./images/img1.jpg"
@@ -314,9 +358,23 @@
               </div>
             </li>
             <li class="item">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/img2.jpg 1x, ./images/img2-2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/img2-tab-1x.jpg 1x, ./images/img2-tab-2x.jpg 2x"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/img2-mob-1x.jpg 1x, ./images/img2-mob-2x.jpg 2x"
+                />
+              </picture>
               <img
                 class="team-foto img"
-                src="./images/img2.jpg"
+                src="./images/img2-mob-1x.jpg"
                 alt="фото Frontend Developer"
                 width="450"
               />
@@ -356,9 +414,23 @@
               </div>
             </li>
             <li class="item">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/img3.jpg 1x, ./images/img3-2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/img3-tab-1x.jpg 1x, ./images/images/img3-tab-2x.jpg 2x "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/img3-mob-1x.jpg 1x, ./images/img3-mob-2x.jpg 2x "
+                />
+              </picture>
               <img
                 class="team-foto img"
-                src="./images/img3.jpg"
+                src="/images/img3-mob-1x.jpg"
                 alt="фото Marketing"
                 width="450"
               />
@@ -398,9 +470,23 @@
               </div>
             </li>
             <li class="item">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/img4.jpg 1x, ./images/img4-2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/img4-tab-1x.jpg 1x, ./images/img4-tab-2x.jpg 2x"
+                />
+                <source
+                  media="(max-width: 767)"
+                  srcset="./images/img4-mob-1x.jpg 1x, ./images/img4-mob-2x.jpg 2x"
+                />
+              </picture>
               <img
                 class="team-foto img"
-                src="./images/img4.jpg"
+                src="./images/img4-mob-1x.jpg"
                 alt="фото UI Designer"
                 width="450"
               />
@@ -444,7 +530,7 @@
       </section>
       <!-- секція постійні клієнти -->
       <section class="section">
-        <div class="container">
+        <div class="container container-company">
           <h2 class="title title-company">Постійні клієнти</h2>
           <ul class="company-list">
             <li class="company-item">

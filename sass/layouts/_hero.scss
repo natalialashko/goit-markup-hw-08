@@ -1,46 +1,60 @@
 .hero {
   padding-top: 118px;
   padding-bottom: 118px;
-  height: 400px;
+  padding-left: 60px;
+  padding-right: 60px;
+  // height: 400px;
   margin-left: auto;
   margin-right: auto;
   background-color: #2f303a;
   text-align: center;
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/img_hero.jpg);
+
+  background-image: var(--gra), url(../images/hero-mob-1x.jpg);
+  @include retina  {
+    background-image: var(--gra), url(../images/hero-mob-2x.jpg);
+  }
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) 
+  {
+    background-image: var(--gra), url(../images/hero-tab-1x.jpg);
+    @include retina    {
+      background-image: var(--gra), url(../images/hero-tab-2x.jpg);
+    }
+  }
+  @media screen and (min-width: 1200px) 
+  {
     padding-top: 200px;
     padding-bottom: 200px;
     height: 600px;
     max-width: 1600px;
+    
+    background-image: var(--gra), url(../images/img_hero.jpg);
+    @include retina {
+      background-image: var(--gra), url(../images/hero-2x.jpg);
+    }
   }
-    & .hero__title 
-    {
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 30px;
-      // width: 360px;
-      color: var(--additional-text-color);
-        font-weight: 900;
-        font-size: 26px;
-        line-height: 1.62;
-        letter-spacing: 0.06em;
-        text-align: center;
-        text-transform: uppercase;
-      @media screen and (min-width: 768px) {
+  & .hero__title {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    // width: 360px;
+    color: var(--additional-text-color);
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    letter-spacing: 0.06em;
+    text-align: center;
+    text-transform: uppercase;
+    @media screen and (min-width: 768px) {
       width: 696px;
       font-size: 44px;
       line-height: 1.37;
-      }
     }
   }
+}
 
 .hero__btn {
   outline: #2f303a;
