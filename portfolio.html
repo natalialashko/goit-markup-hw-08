@@ -19,7 +19,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-  
+
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
@@ -28,13 +28,13 @@
       <div class="container header__container">
         <nav class="header__nav">
           <!--Logo-->
-          <a href="./" class="header__logo logo">
+          <a href="./ " class="header__logo logo">
             <span class="header__logo-accent logo-accent">Web</span>Studio
           </a>
           <!--меню навігації-->
-          <ul class="menu">
+          <ul class="menu header__menu">
             <li class="menu__item">
-              <a href="./index.html" class="menu__link ">Студія </a>
+              <a href="./index.html" class="menu__link">Студія </a>
             </li>
             <li class="menu__item">
               <a href="./" class="menu__link primary">Портфоліо </a>
@@ -69,6 +69,63 @@
             </a>
           </li>
         </ul>
+        <button class="menu-mobile__open" type="button" data-menu-open>
+          <svg class="actions-item-icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu_40px"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- меню для мобільної версії -->
+      <div class="menu-mobile is-hidden" data-menu>
+        <div class="container">
+          <button class="menu-mobile__close" type="button" data-menu-close>
+            <svg class="actions-item-icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-close-black"></use>
+            </svg>
+          </button>
+          <ul class="menu-mobile__list">
+            <li class="menu-mobile__item">
+              <a href="./" class="menu-mobile__link">Студія </a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="./portfolio.html" class="menu-mobile__link primary"
+                >Портфоліо
+              </a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="#" class="menu-mobile__link">Контакти</a>
+            </li>
+          </ul>
+          <ul class="menu-mobile__address-list">
+            <li class="menu-mobile__address-item">
+              <a
+                href="mailto:info@devstudio.com "
+                class="menu-mobile__email-link"
+              >
+                info@devstudio.com
+              </a>
+            </li>
+            <li class="menu-mobile__address-item">
+              <a href="tel:+380961111111" class="menu-mobile__tel-link">
+                +38 096 111 11 11
+              </a>
+            </li>
+          </ul>
+          <ul class="list-activ">
+            <li class="item-activ">
+              <a href="#" class="name-activ">Instagram</a>
+            </li>
+            <li class="item-activ">
+              <a href="#" class="name-activ">Twitter</a>
+            </li>
+            <li class="item-activ">
+              <a href="#" class="name-activ">Facebook</a>
+            </li>
+            <li class="item-activ">
+              <a href="#" class="name-activ">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <!-- унікальний контент сторінки portfolio-->
@@ -77,7 +134,7 @@
         <div class="container">
           <!-- набор фільтрів -->
           <h1 class="visually-hidden">Портфоліо</h1>
-          <ul class="list-portfolio">
+          <ul class="list-btn-portfolio">
             <li><button class="portfolio-btn" type="button">Усі</button></li>
             <li>
               <button class="portfolio-btn" type="button">Веб-сайти</button>
@@ -95,12 +152,33 @@
             <li class="card-work">
               <a class="link-portfolio" href="#">
                 <div class="box-card">
-                  <img
-                    class="img photo-work"
-                    src="./images/work1.jpg"
-                    alt="Фото веб-сайту"
-                    width="370" 
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./images/work1.jpg 1x, ./images/work1-2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/work1-tab-1x.jpg 1x,
+                        ./images/work1-tab-2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/work1-mob-1x.jpg 1x,
+                        ./images/work1-mob-2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="img photo-work"
+                      src="./images/work1-mob-1x.jpg"
+                      alt="Фото веб-сайту"
+                      width="450"
+                    />
+                  </picture>
+
                   <p class="overlay comment-card">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -117,12 +195,32 @@
               <a class="link-portfolio" href="#">
                 <div>
                   <div class="box-card">
-                    <img
-                      class="img photo-work"
-                      src="./images/work2.jpg"
-                      alt="баскетболісти в польоті"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="./images/work2.jpg 1x, ./images/work2-2x.jpg 2x"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="
+                          ./images/work2-tab-1x.jpg 1x,
+                          ./images/work2-tab-2x.jpg 2x
+                        "
+                      />
+                      <source
+                        media="(max-width: 767px)"
+                        srcset="
+                          ./images/work2-mob-1x.jpg 1x,
+                          ./images/work2-mob-2x.jpg 2x
+                        "
+                      />
+                      <img
+                        class="img photo-work"
+                        src="./images/work2-mob-1x.jpg"
+                        alt="баскетболісти в польоті"
+                        width="450"
+                      />
+                    </picture>
                     <p class="overlay comment-card">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
                       функціоналу та сервісів. Все це дозволить відвідувачу
@@ -143,12 +241,33 @@
             <li class="card-work">
               <a class="link-portfolio" href="#">
                 <div class="box-card">
-                  <img
-                    class="img photo-work"
-                    src="./images/work3.jpg"
-                    alt="фото додатку Ресторан Seafood"
-                    width="370"
-                  />
+                  <picture>
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="./images/work3.jpg 1x, ./images/work3-2x.jpg 2x"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="
+                          ./images/work3-tab-1x.jpg 1x,
+                          ./images/work3-tab-2x.jpg 2x
+                        "
+                      />
+                      <source
+                        media="(max-width: 767px)"
+                        srcset="
+                          ./images/work3-mob-1x.jpg 1x,
+                          ./images/work3-mob-2x.jpg 2x
+                        "
+                      />
+                      <img
+                        class="img photo-work"
+                        src="./images/work3-mob-1x.jpg"
+                        alt="фото додатку Ресторан Seafood"
+                        width="450"
+                      />
+                    </picture>
+                 
                   <p class="overlay comment-card">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -165,12 +284,35 @@
             <li class="card-work">
               <a class="link-portfolio" href="#">
                 <div class="box-card">
-                  <img
-                    class="img photo-work"
-                    src="./images/work4.jpg"
-                    alt="фото проєкту Prime"
-                    width="370"
-                  />
+                  <picture>
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="
+                        ./images/work4.jpg 1x, 
+                        ./images/work4-2x.jpg 2x"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="
+                          ./images/work4-tab-1x.jpg 1x,
+                          ./images/work4-tab-2x.jpg 2x
+                        "
+                      />
+                      <source
+                        media="(max-width: 767px)"
+                        srcset="
+                          ./images/work4-mob-1x.jpg 1x,
+                          ./images/work4-mob-2x.jpg 2x
+                        "
+                      />
+                      <img
+                        class="img photo-work"
+                        src="./images/work4-mob-1x.jpg"
+                         alt="фото проєкту Prime"
+                        width="450"
+                      />
+                    </picture>
+                 
                   <p class="overlay comment-card">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -186,12 +328,35 @@
             <li class="card-work">
               <a class="link-portfolio" href="#">
                 <div class="box-card">
-                  <img
-                    class="img photo-work"
-                    src="./images/work5.jpg"
-                    alt="фото проєкту Boxes"
-                    width="370"
-                  />
+                   <picture>
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="
+                        ./images/work5.jpg 1x, 
+                        ./images/work5-2x.jpg 2x"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="
+                          ./images/work5-tab-1x.jpg 1x,
+                          ./images/work5-tab-2x.jpg 2x
+                        "
+                      />
+                      <source
+                        media="(max-width: 767px)"
+                        srcset="
+                          ./images/work5-mob-1x.jpg 1x,
+                          ./images/work5-mob-2x.jpg 2x
+                        "
+                      />
+                      <img
+                        class="img photo-work"
+                        src="./images/work5-mob-1x.jpg"
+                         alt="фото проєкту Boxes"
+                        width="450"
+                      />
+                    </picture>
+                 
                   <p class="overlay comment-card">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -207,12 +372,35 @@
             <li class="card-work">
               <a class="link-portfolio" href="#">
                 <div class="box-card">
-                  <img
-                    class="img photo-work"
-                    src="./images/work6.jpg"
-                    alt="фото сайту Inspiration has no Borders"
-                    width="370"
-                  />
+                  <picture>
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="
+                        ./images/work6.jpg 1x, 
+                        ./images/work6-2x.jpg 2x"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="
+                          ./images/work6-tab-1x.jpg 1x,
+                          ./images/work6-tab-2x.jpg 2x
+                        "
+                      />
+                      <source
+                        media="(max-width: 767px)"
+                        srcset="
+                          ./images/work6-mob-1x.jpg 1x,
+                          ./images/work6-mob-2x.jpg 2x
+                        "
+                      />
+                      <img
+                        class="img photo-work"
+                        src="./images/work6-mob-1x.jpg"
+                         alt="фото сайту Inspiration has no Borders"
+                        width="450"
+                      />
+                    </picture>
+                 
                   <p class="overlay comment-card">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -228,12 +416,35 @@
             <li class="card-work">
               <a class="link-portfolio" href="#">
                 <div class="box-card">
-                  <img
-                    class="img photo-work"
-                    src="./images/work7.jpg"
-                    alt="зразок дизайну книги"
-                    width="370"
-                  />
+                  <picture>
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="
+                        ./images/work7.jpg 1x, 
+                        ./images/work7-2x.jpg 2x"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="
+                          ./images/work7-tab-1x.jpg 1x,
+                          ./images/work7-tab-2x.jpg 2x
+                        "
+                      />
+                      <source
+                        media="(max-width: 767px)"
+                        srcset="
+                          ./images/work7-mob-1x.jpg 1x,
+                          ./images/work7-mob-2x.jpg 2x
+                        "
+                      />
+                      <img
+                        class="img photo-work"
+                        src="./images/work7-mob-1x.jpg"
+                         alt="зразок дизайну книги"
+                        width="450"
+                      />
+                    </picture>
+                 
                   <p class="overlay comment-card">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -249,12 +460,35 @@
             <li class="card-work">
               <a class="link-portfolio" href="#">
                 <div class="box-card">
-                  <img
-                    class="img photo-work"
-                    src="./images/work8.jpg"
-                    alt="фото проєкту LAB"
-                    width="370"
-                  />
+                  <picture>
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="
+                        ./images/work8.jpg 1x, 
+                        ./images/work8-2x.jpg 2x"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="
+                          ./images/work8-tab-1x.jpg 1x,
+                          ./images/work8-tab-2x.jpg 2x
+                        "
+                      />
+                      <source
+                        media="(max-width: 767px)"
+                        srcset="
+                          ./images/work8-mob-1x.jpg 1x,
+                          ./images/work8-mob-2x.jpg 2x
+                        "
+                      />
+                      <img
+                        class="img photo-work"
+                        src="./images/work8-mob-1x.jpg"
+                          alt="фото проєкту LAB"
+                        width="450"
+                      />
+                    </picture>
+                  
                   <p class="overlay comment-card">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -270,12 +504,35 @@
             <li class="card-work">
               <a class="link-portfolio" href="#">
                 <div class="box-card">
-                  <img
-                    class="img photo-work"
-                    src="./images/work9.jpg"
-                    alt="фото додатку Growing Business"
-                    width="370"
-                  />
+                  <picture>
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="
+                        ./images/work9.jpg 1x, 
+                        ./images/work9-2x.jpg 2x"
+                      />
+                      <source
+                        media="(min-width: 768px)"
+                        srcset="
+                          ./images/work9-tab-1x.jpg 1x,
+                          ./images/work9-tab-2x.jpg 2x
+                        "
+                      />
+                      <source
+                        media="(max-width: 767px)"
+                        srcset="
+                          ./images/work9-mob-1x.jpg 1x,
+                          ./images/work9-mob-2x.jpg 2x
+                        "
+                      />
+                      <img
+                        class="img photo-work"
+                        src="./images/work9-mob-1x.jpg"
+                          alt="фото додатку Growing Business"
+                        width="450"
+                      />
+                    </picture>
+                 
                   <p class="overlay comment-card">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -293,66 +550,67 @@
       </section>
     </main>
     <!-- підвал сторінки-->
-     <footer class="footer section">
+    <footer class="footer section">
       <div class="container footer__container">
-        <div>
-          <a href="./" class="footer__logo logo">
-            <span class="footer__logo-accent logo-accent">Web</span>Studio
-          </a>
-          <address class="footer__contacts">
-            <p class="footer__address">м. Київ, пр-т Лесі Українки, 26</p>
-            <ul class="footer__address-list ">
-              <li class="footer__address-item address-item">
-                <a 
-                href="mailto:info@devstudio.com" 
-                class="footer__address-link address-link"
-                  >info@devstudio.com
+        <div class="footer_tablet">
+          <div class="footer__box-contacts">
+            <a href="./" class="footer__logo logo">
+              <span class="footer__logo-accent logo-accent">Web</span>Studio
+            </a>
+            <address class="footer__contacts">
+              <p class="footer__address">м. Київ, пр-т Лесі Українки, 26</p>
+              <ul class="footer__address-list">
+                <li class="footer__address-item address-item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="footer__address-link address-link"
+                    >info@devstudio.com
+                  </a>
+                </li>
+                <li class="footer__address-item address-item">
+                  <a
+                    href="tel:+380961111111"
+                    class="footer__address-link address-link"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-actions">
+            <p class="footer-actions__title">приєднуйтесь</p>
+            <ul class="footer-actions__list">
+              <li class="footer-actions__item">
+                <a class="footer-actions__link actions-item-link" href="#">
+                  <svg class="footer-actions__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
                 </a>
               </li>
-              <li class="footer__address-item address-item">
-                <a 
-                href="tel:+380961111111" 
-                class="footer__address-link address-link"
-                  >+38 096 111 11 11</a
-                >
+              <li class="footer-actions__item">
+                <a class="footer-actions__link actions-item-link" href="#">
+                  <svg class="footer-actions__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-actions__item">
+                <a class="footer-actions__link actions-item-link" href="#">
+                  <svg class="footer-actions__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-actions__item">
+                <a class="footer-actions__link actions-item-link" href="#">
+                  <svg class="footer-actions__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
+          </div>
         </div>
-        <div class="footer-actions">
-          <p class="footer-actions__title">приєднуйтесь</p>
-          <ul class="footer-actions__list ">
-            <li class="footer-actions__item">
-              <a class="footer-actions__link actions-item-link" href="#">
-                <svg class="footer-actions__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-actions__item">
-              <a class="footer-actions__link actions-item-link " href="#">
-                <svg class="footer-actions__icon " width="20" height="20">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-actions__item">
-              <a class="footer-actions__link actions-item-link " href="#">
-                <svg class="footer-actions__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-actions__item">
-              <a class="footer-actions__link actions-item-link " href="#">
-                <svg class="footer-actions__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-
         <div class="email-input">
           <p class="email-input__title">Підпишіться на розсилку</p>
           <form class="email-input__form">
@@ -372,5 +630,7 @@
         </div>
       </div>
     </footer>
+    <!-- <script src="./js/modal.js"></script> -->
+    <script src="./js/menu.js"></script>
   </body>
 </html>

@@ -140,7 +140,7 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   transition: background var(--timing-function);
-  z-index: 1;
+  z-index: 2;
 }
 
 .modal {
@@ -169,14 +169,19 @@ body {
 }
 
 .modal-title {
-  font-size: 14px;
-  line-height: 12/14;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
+  max-width: 370px;
   margin-bottom: 30px;
 }
 @media screen and (min-width: 1200px) {
   .modal-title {
+    max-width: 448px;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
@@ -269,6 +274,17 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+@media screen and (min-width: 1200px) {
+  .modal-comment {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 .modal-comment:hover, .modal-comment:focus {
   background: #ffffff;
@@ -304,7 +320,7 @@ body {
   display: inline-block;
   width: 16px;
   height: 15px;
-  border: 1px solid #212121;
+  border: 2px solid #212121;
 }
 .checkbox-text {
   font-weight: 400;
@@ -313,7 +329,7 @@ body {
   letter-spacing: 0.03em;
   color: #757575;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .checkbox-text {
     font-size: 14px;
   }
@@ -326,12 +342,13 @@ body {
 .document {
   color: var(--accent-color);
   font-size: 12px;
-  line-height: 1.71;
+  line-height: 1.17;
   letter-spacing: 0.03em;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .document {
     font-size: 14px;
+    line-height: 1.71;
   }
 }
 .document::after {
@@ -340,8 +357,8 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 1px;
-  border: 1px solid var(--accent-color);
+  border: none;
+  border-bottom: 1px solid var(--accent-color);
   background-color: var(--accent-color);
 }
 
@@ -387,6 +404,9 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
+.menu-mobile__open {
+  cursor: pointer;
+}
 @media screen and (min-width: 768px) {
   .menu-mobile__open {
     display: none;
@@ -395,6 +415,7 @@ body {
 
 .menu-mobile {
   position: fixed;
+  z-index: 1;
   top: 0;
   width: 100vw;
   height: 100vh;
@@ -404,7 +425,7 @@ body {
   padding-right: 40px;
   background: #FFFFFF;
 }
-.menu-mobile > .conteiner {
+.menu-mobile > .container {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -417,8 +438,14 @@ body {
   }
 }
 
+.menu-mobile__link.primary {
+  color: var(--accent-color);
+}
+
 .menu-mobile__open {
+  cursor: pointer;
   border: none;
+  border-color: transparent;
 }
 .menu-mobile__open:hover, .menu-mobile__open:focus {
   color: var(--accent-color);
@@ -442,10 +469,6 @@ body {
 
 .menu-mobile__item:not(:last-child) {
   margin-bottom: 32px;
-}
-
-.menu-mobile__list {
-  margin-bottom: 206px;
 }
 
 .menu-mobile__link {
@@ -476,7 +499,7 @@ body {
 }
 
 .menu-mobile__address-list {
-  margin-bottom: 64px;
+  margin-bottom: 20px;
 }
 
 .item-activ:not(:last-child) {
@@ -751,13 +774,16 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     width: calc(100% - 30px)/2;
+    gap: 30;
   }
 }
 @media screen and (min-width: 1200px) {
   .box-detail-list {
-    gap: 30;
     width: calc(100% - 120px)/4;
   }
+}
+.box-detail-list > .item {
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .box-detail-list > .item {
@@ -768,6 +794,9 @@ body {
   .box-detail-list > .item {
     width: 270px;
   }
+}
+.box-detail-list > .item:last-child {
+  margin-bottom: 0px;
 }
 .box-detail-list .text {
   font-size: 14px;
@@ -913,18 +942,20 @@ body {
   background-color: var(--primary-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .teams-work .item {
     margin-bottom: 0px;
   }
 }
+.teams-work .item .item:last-child {
+  margin-bottom: 0px;
+}
+
 .box-subtitle {
   padding-top: 30px;
   padding-bottom: 24px;
-  padding-left: 122px;
-  padding-right: 122px;
 }
 @media screen and (min-width: 768px) {
   .box-subtitle {
@@ -1019,12 +1050,12 @@ body {
 }
 @media screen and (min-width: 768px) {
   .company-item {
-    width: calc(100% - 60px)/3;
+    width: 226px;
   }
 }
 @media screen and (min-width: 1200px) {
   .company-item {
-    width: calc(100% - 150px)/6;
+    width: 170px;
   }
 }
 
@@ -1171,7 +1202,7 @@ body {
 }
 
 .footer-actions__icon {
-  fill: currentColor;
+  fill: #ffffff;
 }
 
 .email-input {
@@ -1194,17 +1225,20 @@ body {
 @media screen and (min-width: 768px) {
   .email-input__form {
     display: flex;
+    flex-direction: column;
     gap: 12px;
   }
 }
 @media screen and (min-width: 1200px) {
   .email-input__form {
+    flex-direction: row;
     align-content: center;
   }
 }
 .email-input__email {
   margin-bottom: 20px;
   min-width: 358px;
+  width: 450px;
   height: 50px;
   background-color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1241,31 +1275,29 @@ body {
   background: var(--primary-background-color);
 }
 
-.list-portfolio {
+.list-btn-portfolio {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 326px;
+  gap: 15px;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
   margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
-  .list-portfolio {
+  .list-btn-portfolio {
     flex-wrap: nowrap;
-    width: calc(100% - 30px)/2;
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 8px;
     justify-content: center;
     margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .list-portfolio {
-    width: calc(100% - 60px)/3;
-    margin-left: auto;
-    margin-right: auto;
+  .list-btn-portfolio {
     margin-bottom: 50px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .list-portfolio li + li {
-    margin-left: 8px;
   }
 }
 
@@ -1307,6 +1339,20 @@ body {
   }
 }
 
+.card-work {
+  width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .card-work {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-work {
+    width: 370px;
+  }
+}
+
 .link-portfolio {
   display: block;
   width: 100%;
@@ -1318,10 +1364,6 @@ body {
 }
 .link-portfolio:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.card-work {
-  width: 370px;
 }
 
 .box-card {

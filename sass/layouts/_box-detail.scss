@@ -10,13 +10,15 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: calc(100% - 30px) / 2;
+    gap: 30;
   }
   @media screen and (min-width: 1200px) {
-    gap: 30;
+   
     width: calc(100% - 120px) / 4;
   }
 
   > .item {
+    margin-bottom: 30px;
     @media screen and (min-width: 768px) {
       width: 352px;
       // width: 100%;
@@ -28,7 +30,9 @@
       // width: calc(100% - 120px)/4;
     }
   }
-
+> .item:last-child{
+  margin-bottom: 0px;
+}
   & .text {
     font-size: 14px;
     line-height: 1.72;
